@@ -2,8 +2,12 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   output: 'export',
+  basePath: process.env.PAGES_BASE_PATH,
   reactCompiler: true,
   typedRoutes: true,
+  images: {
+    unoptimized: true,
+  },
 }
 
 export default nextConfig
